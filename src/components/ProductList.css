@@ -1,0 +1,12 @@
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap:20px;
+    padding: 40px;
+}
+
+.search-box{
+    margin: 20px;
+    padding: 10px;
+    width: 300px;
+}

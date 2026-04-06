@@ -1,0 +1,27 @@
+.detail-container{
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    background: white;
+    margin: 40px;
+    border-radius: 10px;
+}
+
+.detail-container img{
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+.detail-info{
+    max-width: 400px;
+}
+
+.detail-info button{
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

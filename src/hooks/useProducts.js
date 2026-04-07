@@ -18,7 +18,7 @@ function useProducts(){
             }
             //  setting error if exists
             catch(err){
-                setError("failed to fetch products")
+                setError("Failed, Product are not available")
             }
             
         }

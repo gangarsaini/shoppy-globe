@@ -30,8 +30,7 @@ function ProductList() {
                 return(
                     <ProductItem key={product.id} product={product} />
                 )
-                
-            })
+              })
           }
         </div>
        

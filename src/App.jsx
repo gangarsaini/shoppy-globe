@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react"
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import './App.css';
 
 // Loading the Layout lazily for the faster loading
 const Layout = lazy(()=>import("./components/Layout"))

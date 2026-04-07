@@ -16,14 +16,12 @@ function ProductItem({product}) {
         {/* dispalying product title*/}
         <h3>{product.title}</h3>
 
-        {/* dispalying product price*/}
+      <div className="cta-design">
          <p>₹ {product.price}</p>
-
-         {/* Link to view Details about the product */}
-         View Details
-
-         {/* button to add items to the cart */}
          <button onClick={()=>dispatch(addItem(product))}> Add to Cart</button>
+      </div>
+       
+        
         </div>
         </Link>
   )

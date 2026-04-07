@@ -22,7 +22,7 @@ function ProductList() {
   return (
     <div>
         {/* setting input value for text in searchSlice on change in input */}
-       <div className="Search-bar"><span><IoIosSearch /></span><input className="search-box" type="text" placeholder="search product" onChange={(e)=>dispatch(setSearch(e.target.value))}
+       <div className="Search-bar"><span><IoIosSearch /></span><input className="search-box" type="text" placeholder="Search product by name" onChange={(e)=>dispatch(setSearch(e.target.value))}
         /></div>
         <div className="product-container">
           {    

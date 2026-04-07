@@ -35,3 +35,12 @@
    padding-left: 40px;
    outline:none;
 }
+
+@media (max-width:620px){
+    .Search-bar{
+        padding:0px 16px;
+    }
+    .Search-bar span{
+        left:24px;
+    }
+}

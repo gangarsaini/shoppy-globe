@@ -48,6 +48,6 @@ import { createSlice } from "@reduxjs/toolkit";
     }
  })
 
- export const{addItem, removeItem, increaseQuantity, decreaseQuantity, clearCart } = cartSlice.actions
+ export const{addItem,removeItem,increaseQuantity,decreaseQuantity,clearCart } = cartSlice.actions
 
  export default cartSlice.reducer

@@ -16,7 +16,6 @@ It allows users to browse products, view details, add items to cart, and place o
 
 
 ## Tech Stack
-
 * React (Vite)
 * Redux (State Management)
 * React Router (Routing)
@@ -25,11 +24,9 @@ It allows users to browse products, view details, add items to cart, and place o
 
 
 ## API Used
-
 * https://dummyjson.com/products
 
 ## Key Concepts Implemented
-
 ### ✔ Props
 
 * Passing data from parent to child components

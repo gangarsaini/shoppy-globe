@@ -2,9 +2,13 @@ import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import { clearCart } from "../redux/cartSlice"
 import "./Checkout.css"
+import { useState } from "react"
 
 function Checkout() {
-  
+   const [name,setName] = useState('');
+   const[address,setAddress] = useState('');
+   const [error,setError]  = useState('');
+   const[placed,setPlaced] = useState('')
     //  fetching items from the store using useSelector hook
     const items = useSelector(store => store.cart.items)
     //  useDispatch to dispatch any action
@@ -16,9 +20,17 @@ function Checkout() {
     //  Demo function for placing the order after button click
     function placeOrder(){
          
+        if(!name.trim()  || !address.trim()){
+          setError("Please Enter Name and Address First");
+          return;
+        }
 
+        if(items.length === 0){
+          setError('Cart is empty');
+          return
+        }
 
-        alert("Order placed successfully")
+        setPlaced("Your Order placed successfully")
 
         dispatch(clearCart())
 
@@ -30,22 +42,22 @@ function Checkout() {
     <div className="checkout">
         <h2>Checkout</h2>
          {/* input to colect name and address of the user */}
-        <input type="text" placeholder="Name" required value=""/>
-        <input type="text" placeholder="Address" required value=""/>
+        <input type="text" placeholder="Name" required value={name} onChange={(e) => setName(e.target.value)}/>
+        <input type="text" placeholder="Address" required value={address} onChange={(e)=>setAddress(e.target.value)}/>
+        <p className="err">{error}</p>
+        <p className="place">{placed}</p>
          {/* Order summary */}
-         <h3>Order summary</h3>
+         <h3>Order Summary</h3>
          {
-            items.length === 0 ?
-            <p>No Items in Cart</p>
-            :
             items.map(item=>(
-                <div key={item.id}>
+                <h4 key={item.id}>
                     <p>{item.title} x {item.quantity}</p>
-                </div>
+                </h4>
             ))
+          
          }
            <h3>Total: ₹ {totalPrice} </h3>
-         {/* Button to place order */}
+        
 
         
         <button onClick={placeOrder}>Place Order</button>

@@ -22,20 +22,26 @@ function ProductList() {
   return (
     <div>
         {/* setting input value for text in searchSlice on change in input */}
-       <div className="Search-bar"><span><IoIosSearch /></span><input className="search-box" type="text" placeholder="Search product by name" onChange={(e)=>dispatch(setSearch(e.target.value))}
-        /></div>
-        <div className="product-container">
-          {    
-            // passing the products from fileteredProducts to productList component
-            filteredProducts.map(product =>{
-                return(
-                    <ProductItem key={product.id} product={product} />
-                )
-              })
-          }
+           <div className="Search-bar"><span><IoIosSearch /></span>
+            <input 
+              className="search-box" 
+              type="text" 
+              placeholder="Search product by name" 
+              onChange={(e)=>dispatch(setSearch(e.target.value)
+              )}
+            />
+            </div>
+            <div className="product-container">
+              {    
+              // passing the products from fileteredProducts to productList component
+              filteredProducts.map(product =>{
+                  return(
+                      <ProductItem key={product.id} product={product}/>
+                  )
+                })
+               }
+            </div>
         </div>
-       
-    </div>
   )
 }
 

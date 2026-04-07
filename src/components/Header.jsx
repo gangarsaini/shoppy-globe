@@ -13,7 +13,6 @@ function Header() {
 
            <Link to="/cart">Cart ({cartItems.length})</Link>
         </div>
-        
     </div>
   )
 }

@@ -45,4 +45,7 @@ color: #2E8B57;
     .checkout input{
        width:100%;
     }
+  .checkout{
+    padding:32px 16px;
+  }
 }

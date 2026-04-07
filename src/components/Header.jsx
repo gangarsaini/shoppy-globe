@@ -10,7 +10,6 @@ function Header() {
        <h2><Link to="/">ShoppyGlobe</Link></h2>
         <div className="nav-links">
            <Link to="/">Home</Link>
-
            <Link to="/cart">Cart ({cartItems.length})</Link>
         </div>
     </div>

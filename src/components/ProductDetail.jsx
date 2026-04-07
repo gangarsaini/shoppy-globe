@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import useProductDetail from "../hooks/useProductDetail"
 import { useDispatch } from "react-redux"
 import { addItem } from "../redux/cartSlice"
@@ -23,10 +23,9 @@ function ProductDetail() {
                 <h2>{product?.title}</h2>
 
                 <p>{product?.description}</p>
-
                 <h3>₹ {product?.price}</h3>
                 {/* dispatching an action on button click to add component to the cart */}
-                <button onClick={() => dispatch(addItem(product))}>Add to Cart</button>
+                <button onClick={() => dispatch(addItem(product))}><Link to="/cart">Add to Cart</Link></button>
             </div>
 
         </div>

@@ -37,6 +37,11 @@
     
 }
 
+.detail-info a{
+    text-decoration: none;
+    color:#fff;
+}
+
 @media(max-width:620px){
     .detail-container{
         flex-direction: column;

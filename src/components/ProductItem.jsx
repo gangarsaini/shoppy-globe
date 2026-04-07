@@ -18,7 +18,7 @@ function ProductItem({product}) {
 
           <div className="cta-design">
             <p>₹ {product.price}</p>
-            <button onClick={()=>dispatch(addItem(product))}>Add to Cart</button>
+            {/* <button onClick={()=>dispatch(addItem(product))}>Add to Cart</button> */}
           </div>
           </div>
     </Link>

@@ -11,6 +11,11 @@
     border-radius: 8px;
 }
 
+h2.cart-page{
+    text-align: center;
+    padding-top:20px;
+}
+
 .qty-btn{
     margin: 0 5px;
     padding: 5px 10px;

@@ -12,7 +12,7 @@ function ProductDetail() {
     //  using useDispatch hook for dipatching the action
     const dispatch = useDispatch()
     //  acts as a fallback source if there is a delay in loading
-    if (!product) return <h2>Loading...</h2>
+    if (!product) return <h2 className="place-center">Loading...</h2>
     return (
         //  description about the product with it's image and details 
         <div className="detail-container">

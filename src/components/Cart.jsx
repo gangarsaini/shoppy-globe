@@ -12,7 +12,7 @@ function Cart() {
     },0)
 
     //  returning empty cart message if the cart is empty
-    if(items.length == 0) return <h2>Cart Empty</h2>    
+    if(items.length == 0) return <h2 className="cart-page">Cart is Empty</h2>    
 
   return (
     <div className="cart-container">

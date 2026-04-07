@@ -17,7 +17,7 @@ function ProductList() {
      const dispatch = useDispatch()
 
     //returning the error if fetching fails
-    if(error) return <h2>Error Loading products</h2>
+    if(error) return <h2 className="place-center">Error Loading products</h2>
 
   return (
     <div>

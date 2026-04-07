@@ -1,8 +1,12 @@
 *{
     margin:0px;
-    box-shadow: 0px;
+    box-sizing: 0px;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
 }
 
+h2.place-center{
+    text-align: center;
+    padding-top:20px;
+}

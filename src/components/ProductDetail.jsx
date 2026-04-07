@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import useProductDetail from "../hooks/useProductDetail"
 import { useDispatch } from "react-redux"
 import { addItem } from "../redux/cartSlice"
-import "./ProductDetail.css"
+import "./ProductDetail.css";
 
 function ProductDetail() {
     // fetching id from the url using useparams hook

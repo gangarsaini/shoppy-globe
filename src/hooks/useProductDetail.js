@@ -6,32 +6,28 @@ function useProductDetail(id){
     const [error, setError] = useState(null);
 
     useEffect(()=>{
-        // function to fetch data based on id
         setLoading(true);
         setError(null);
+
         async function fetchProduct() {
             try{
-            const res = await fetch( `https://dummyjson.com/products/${id}`)
-            if(!res.ok){
-                throw new Error("Failed to fetch product data");
-            }
-            const data = await res.json()
-            //  setting up the product fetched to useState variable product 
-            setProduct(data);
-            
+                const res = await fetch(`https://dummyjson.com/products/${id}`);
+                const data = await res.json();
+                setProduct(data);
             }
             catch(err){
-              setError(err.msg)
+                setError("There is some issue in this id");
             }
-            finally{
-                setLoading(false)
+            finally {
+                setLoading(false); // best practice
             }
         }
-        fetchProduct()
 
-    },[id])
+        fetchProduct();
 
-    return {product,loading,error}
+    },[id]);
+
+    return {product, loading, error};
 }
 
 export default useProductDetail;

@@ -29,12 +29,14 @@ function Checkout() {
           setError('Cart is empty');
           return
         }
-
+        setError('')
         setPlaced("Your Order placed successfully")
 
         dispatch(clearCart())
 
-        navigate("/")
+        setTimeout(()=>{
+           navigate("/")
+        },2000)
     }
 
 

@@ -56,11 +56,11 @@ function Checkout() {
             ))
           
          }
-           <h3>Total: ₹ {totalPrice} </h3>
-        
-
-        
-        <button onClick={placeOrder}>Place Order</button>
+        <h3>Total: ₹ {totalPrice} </h3>
+        <button 
+         onClick={placeOrder}
+        >Place Order
+        </button>
     </div>
   )
 }

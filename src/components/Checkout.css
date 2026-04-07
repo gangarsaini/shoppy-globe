@@ -7,6 +7,9 @@
     margin-bottom: 15px;
     padding: 10px;
     width: 300px;
+    border-radius:4px;
+    border:1px solid #ccc5c5;
+    outline: none;
 }
 
 .checkout button{
@@ -36,4 +39,10 @@ color: #2E8B57;
 
 .checkout h3:first-child{
     margin-top:10px;
+}
+
+@media(max-width:520px){
+    .checkout input{
+       width:100%;
+    }
 }

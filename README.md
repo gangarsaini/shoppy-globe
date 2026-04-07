@@ -65,7 +65,7 @@ It allows users to browse products, view details, add items to cart, and place o
 * Add product
 * Remove product
 * Increase/decrease quantity
-* Minimum quantity = 1
+
 
 ## 💳 Checkout
 
@@ -82,7 +82,7 @@ CSS Styling only
 ## 🔗 GitHub Repository
 
 👉 # Clone repository
-git clone https://github.com/gangarsaini/shoppy-globe/commits/main/
+git clone https://github.com/gangarsaini/shoppy-globe
 
 
 

@@ -3,6 +3,7 @@ import useProducts from "../hooks/useProducts"
 import { setSearch } from "../redux/searchSlice"
 import ProductItem from "./ProductItem"
 import "./ProductList.css"
+import { IoIosSearch } from "react-icons/io";
 
 function ProductList() {
     // to obtain products Array and error if exists
@@ -21,8 +22,8 @@ function ProductList() {
   return (
     <div>
         {/* setting input value for text in searchSlice on change in input */}
-        <input className="search-box" type="text" placeholder="search product" onChange={(e)=>dispatch(setSearch(e.target.value))}
-        />
+       <div className="Search-bar"><span><IoIosSearch /></span><input className="search-box" type="text" placeholder="search product" onChange={(e)=>dispatch(setSearch(e.target.value))}
+        /></div>
         <div className="product-container">
           {    
             // passing the products from fileteredProducts to productList component

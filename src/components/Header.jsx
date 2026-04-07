@@ -7,7 +7,7 @@ function Header() {
     const cartItems = useSelector(store => store.cart.items)
   return (
     <div className="header">
-        <h2>ShoppyGlobe</h2>
+       <h2><Link to="/">ShoppyGlobe</Link></h2>
         <div className="nav-links">
            <Link to="/">Home</Link>
 

@@ -1,3 +1,4 @@
+
 .header{
     display: flex;
     justify-content: space-between;
@@ -7,12 +8,20 @@
     color: white;
 }
 
+.header h2 a{
+    text-decoration: none;
+    color:#ffffff;
+}
+
 .nav-links a{
 
     margin-left: 20px;
     text-decoration: none;
     color: white;
     font-weight: bold;
+    font-style: italic;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
 
 }
 

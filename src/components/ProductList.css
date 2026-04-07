@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap:20px;
-    padding: 40px;
+    padding:0px 40px 40px 40px;
     position: relative;
 }
 
@@ -10,10 +10,28 @@
     text-decoration: none;
 }
 
+.Search-bar{
+    margin:20px auto;
+    max-width:500px;
+    position: relative;
+}
+
+.Search-bar span{
+    position:absolute;
+    left:8px;
+    top:8px
+}
+
+.Search-bar span svg{
+    font-size:24px;
+  
+}
+
 .search-box{
-    margin: 20px;
-    padding: 10px;
-   
-    border-radius:4px;
-    width:100%;
+   padding: 10px;
+   border-radius:6px;
+   width:100%;
+   border:1px solid #2563eb;
+   padding-left: 40px;
+   outline:none;
 }

@@ -36,3 +36,9 @@
     border-radius:5px;
     
 }
+
+@media(max-width:620px){
+    .detail-container{
+        flex-direction: column;
+    }
+}

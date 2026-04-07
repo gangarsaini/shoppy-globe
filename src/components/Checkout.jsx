@@ -4,6 +4,7 @@ import { clearCart } from "../redux/cartSlice"
 import "./Checkout.css"
 
 function Checkout() {
+  
     //  fetching items from the store using useSelector hook
     const items = useSelector(store => store.cart.items)
     //  useDispatch to dispatch any action
@@ -14,18 +15,23 @@ function Checkout() {
     const totalPrice = items.reduce((total,item)=>total+item.price*item.quantity,0)
     //  Demo function for placing the order after button click
     function placeOrder(){
+         
+
+
         alert("Order placed successfully")
 
         dispatch(clearCart())
 
         navigate("/")
     }
+
+
   return (
     <div className="checkout">
         <h2>Checkout</h2>
          {/* input to colect name and address of the user */}
-        <input type="text" placeholder="name" />
-        <input type="text" placeholder="address" />
+        <input type="text" placeholder="Name" required value=""/>
+        <input type="text" placeholder="Address" required value=""/>
          {/* Order summary */}
          <h3>Order summary</h3>
          {
@@ -40,6 +46,8 @@ function Checkout() {
          }
            <h3>Total: ₹ {totalPrice} </h3>
          {/* Button to place order */}
+
+        
         <button onClick={placeOrder}>Place Order</button>
     </div>
   )

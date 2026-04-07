@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    background: black;
+    background: #2563eb;
     color: white;
 }
 
@@ -17,5 +17,5 @@
 }
 
 .nav-links a:hover{
-    color: orange;
+    color: #f59e0b;
 }

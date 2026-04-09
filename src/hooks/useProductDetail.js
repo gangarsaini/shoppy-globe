@@ -11,8 +11,9 @@ function useProductDetail(id){
 
         async function fetchProduct() {
             try{
-                const res = await fetch(`https://dummyjson.com/products/${id}`);
-                const data = await res.json();
+                 const res = await fetch(`https://dummyjson.com/products/${id}`);
+                //const res = await fetch(`http://localhost:5000/api/products/${id}`);
+                 const data = await res.json();
                 setProduct(data);
             }
             catch(err){

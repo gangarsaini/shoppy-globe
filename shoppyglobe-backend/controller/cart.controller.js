@@ -12,6 +12,14 @@ const Product = require("../model/product.modal");
 const addToCart = async (req, res) => {
   try {
     const { productId, quantity } = req.body;
+     //Validation
+    if (!productId || !quantity) {
+      return res.status(400).json({ msg: "ProductId and quantity required" });
+    }
+
+    if (quantity <= 0) {
+      return res.status(400).json({ msg: "Quantity must be greater than 0" });
+    }
    
     // check product exists
     const product = await Product.findById(productId);

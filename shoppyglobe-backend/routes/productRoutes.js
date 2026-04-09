@@ -27,7 +27,16 @@ router.get("/:id", async (req, res) => {
 router.post("/", async (req, res) => {
   try {
     const { name, price, description, stock } = req.body;
-    const newProduct = new Product({
+
+    if (!name || !price || !description || !stock) {
+      return res.status(400).json({ msg: "All fields are required" });
+    }
+
+   if (price <= 0 || stock < 0) {
+      return res.status(400).json({ msg: "Invalid price or stock" });
+    }
+
+   const newProduct = new Product({
       name,
       price,
       description,
@@ -35,7 +44,6 @@ router.post("/", async (req, res) => {
     });
 
     await newProduct.save();
-
     res.status(201).json(newProduct);
   } catch (err) {
     res.status(500).json(err);   //server error 500

@@ -33,7 +33,7 @@ function verifyToken(req,res,next){
     );
   }
   else{
-    res.status(404).json({})
+    res.status(404).json({msg:"login first, You have not token"})
   }
 }
 

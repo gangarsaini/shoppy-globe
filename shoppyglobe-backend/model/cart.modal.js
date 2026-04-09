@@ -1,9 +1,9 @@
-// const mongoose = require("mongoose");
+const mongoose = require("mongoose");
 
-// const cartSchema = new mongoose.Schema({
-//   userId: String,
-//   productId: String,
-//   quantity: Number
-// });
+const cartSchema = new mongoose.Schema({
+  userId: String,
+  productId: String,
+  quantity: Number
+});
 
-// module.exports = mongoose.model("Cart", cartSchema);
+module.exports = mongoose.model("Cart", cartSchema);

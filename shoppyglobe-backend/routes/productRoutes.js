@@ -1,6 +1,6 @@
 const express = require("express");
 const Product = require("../model/product.modal");
-
+const verifyToken = require('../middleware/auth')
 const router = express.Router();
 console.log("Hello  am product");
 
@@ -9,7 +9,7 @@ console.log("Hello  am product");
 
 
 // GET all products
-router.get("/", async (req, res) => {
+router.get("/", verifyToken, async (req, res) => {
   const products = await Product.find();
   console.log(products);
   res.json(products);
@@ -79,6 +79,4 @@ router.delete("/:id", async (req, res) => {
     res.status(500).json(err); //server error 500
   }
 });
-
-
 module.exports = router;

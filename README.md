@@ -84,6 +84,15 @@ git clone https://github.com/gangarsaini/shoppy-globe
 
 
 
+## Backend 
+
+token - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDdmYWJmMWIzNWQwODQ5ZThhNDdiOCIsImlhdCI6MTc3NTc2MzI0Mn0.c153qBD6U35FnK16BVSbRfbxTv-1E5N-SdsjG-IdrK0
+
+
+
+
+
+
 
 
 

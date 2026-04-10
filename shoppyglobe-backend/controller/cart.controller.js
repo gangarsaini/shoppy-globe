@@ -1,9 +1,3 @@
-// router.get("/", auth, async (req, res) => {
-//   const items = await Cart.find({ userId: req.user.id });
-//   res.json(items);
-// });
-
-
 const Cart = require('../model/cart.modal');
 const Product = require("../model/product.modal");
 
